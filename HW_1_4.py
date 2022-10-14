@@ -9,9 +9,6 @@
 
 a = float(input('Введите число: '))
 x = str(input('Введите операцию: +, -, /, *, mod, pow, div: '))
-if x not (+):
-    print('Неверная операция')
-
 b = float(input('Введите второе число: '))
 
 if x == '+':
@@ -23,10 +20,10 @@ elif x == '/':
 elif x == '*':
     print(a * b)
 elif x == 'mod':
-    print(a % b)
+    print(round(a % b))
 elif x == 'pow':
-    print(a ** b)
+    print(round(a ** b, 3))
 elif x == 'div':
-    print(a // b)
+    print(round(a // b))
 else:
     print('Вы ввели некорректные данные')

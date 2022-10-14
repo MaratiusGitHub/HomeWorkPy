@@ -6,11 +6,10 @@
 # ⋁ - "или"
 # ⋀ - "и"
 
-print('Введите значение X')
-x = input()
-print('Введите значение Y')
-y = input()
-print('Введите значение Z')
-z = input()
-
-print(not (x or y or z) == (not x and not y and not z))
+for x in True, False:
+    for y in True, False:
+        for z in True, False:
+            if not (x or y or z) == ((not (x) and (not (y) and (not (z))))):
+                print(f'True if x = {x}, y = {y}, z ={z}')
+            else:
+                print('False')
