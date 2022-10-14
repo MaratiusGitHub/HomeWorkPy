@@ -29,12 +29,12 @@ print_massive(mas_2din)
 
 for i in range(a):
     for j in range(b):
-        t = j + 1
-        for t in range(t, b):
-            if mas_2din[i][t] < mas_2din[i][j]:
-                minNum = mas_2din[i][j]
-                mas_2din[i][j] = mas_2din[i][t]
-                mas_2din[i][t] = minNum
+        for x in range(a):
+            for y in range(b):
+                if mas_2din[x][y] > mas_2din[i][j]:
+                    count = mas_2din[i][j]
+                    mas_2din[i][j] = mas_2din[x][y]
+                    mas_2din[x][y] = count
 
 print()
 print_massive(mas_2din)
